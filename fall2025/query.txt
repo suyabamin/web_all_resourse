@@ -1,0 +1,27 @@
+CREATE DATABASE campus_library
+
+CREATE TABLE book_loans(
+LoanID int,
+    StudentName varchar(200),
+    BookTitle varchar(200),
+    DaysOverdue int,
+    PenaltyFee int,
+    Status varchar(200)
+
+
+)
+
+
+INSERT INTO book_loans()
+VALUES (101,'Abdul','Data Structures',0,0,'Returned'),
+       (102,'Jabbar','Operating System',12,24,'Overdue'),
+       (103,'Baekat','Discrete math',5,10,'Overdue'),
+       (104,'Rahim','Linear Algebra',2,4,'Overdue'),
+       (205,'karim','Data Structures',15,30,'Lost'),
+       (106,'Fahim','Operating System',0,0,'Returned')
+
+   UPDATE book_loans
+
+SET Status='Grace Period', PenaltyFee=0 
+
+WHERE Status='Overdue' AND DaysOverdue<7
